@@ -1,0 +1,467 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+
+		<title>C&Tech</title>
+
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<link rel="stylesheet" href="assets/css/detailpopup_style.css"/>
+        
+        <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+        
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+	</head>
+
+	<body class="is-preload"> 
+        
+
+		<!-- Main -->
+                
+			<div id="main">
+				<!-- Intro -->
+                 
+                
+                    <!-- 첫번째 영역
+                
+					<section id="one" class="one dark cover">
+						
+				    
+                    </section>-->
+                    <!-- //첫번째 영역-->
+ 
+
+
+				    <!-- 두번째 영역-->
+
+					<section id="two" class="two">
+						<div class="container" style="width:1200px;">
+                            <div class="container_th" style="height: 15px; background: #8eabc8;"></div>
+                            <div class="container_tab" style=" border:1px solid #f9f9f9; background-color: #f5f5f578; height: 100%; padding:0 0 1em 0;">
+                                
+                                <div class="container_header" style="height:160px;">
+                                <!--담보물 상태표시줄-->
+                                <div class="dambonm" style="width:100%; height:110px; ">
+                                    <a style="color:#666; font-weight: 400; font-size:0.6em;  float:left; text-align: left; padding-left:30px; margin-top:10px; width:100%; height:30px;">홍길동업체홍길동업체홍길동업체홍길동업체홍길동업체</a>
+                                    <a style="color:#111; font-weight: 400; font-size:1.2em;  float:left; text-align: left; padding-left:30px;  width:100%; height:35px; margin-top:5px;">홍길동담보물명홍길동담보물명</a><br>
+                                    <a style="width:100%; margin-bottom:10px; padding-left:30px; font-size:0.8em; float:left; text-align: left;  font-weight:400;">현재 담보물의 상태는 <span style="color:#228b22;">정상작동</span>입니다.</a>
+                                    
+                                    <!--정상작동 : #228b22, 
+                                        정상이동 : #6495ed, 
+                                        위험이동:#ed143d, 
+                                        탈착 :#cc4f3d, 
+                                        배터리부족 :#ffd324, 
+                                        무가동:#00008b, 
+                                        통신이상 :#9932cc   -->
+                                </div>
+                               <!--//담보물 상태-->
+                                
+                                <!--담보물 상세정보-->
+                                <div class="dambo_detail" style="width:100%; height:50px; ">
+                                    <div class="detail_bx" style="width:100%;float: right;">
+                                        <div class="company_detail" style="width:17%; float:right; text-align: left; line-height: 13px;">
+                                            <a style="font-size:0.6em;"><b>평균가동률</b>    </a><a style="font-size:0.6em;">100%</a>
+                                           
+                                        </div>
+                                        <div class="company_detail" style="width:15%;  float:right; text-align: left; line-height: 13px;">
+                                            <a style="font-size:0.6em;"><b>배터리</b></a>    <a style="font-size:0.6em;">100%</a>
+                                        </div>
+                                        <!--<div class="company_detail" style="width:30%; float:right; text-align: left; line-height: 13px;">
+                                             <a style="font-size:0.6em;"><b>업체명</b></a>    <a style="font-size:0.6em;">홍길동업체홍길동업체홍길동업체</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <!--//담보물 상세정보-->
+                                    
+                                </div>
+                                <!--//container_header-->
+                                
+                                <div style="border:1px solid #eee; width:95%; margin:0 auto;"></div>
+                                
+                                <!--담보물 사진/지도 부분-->
+                                <div class="container_body" style="height:450px; margin-top:10px; ">
+                                    
+                                    <!--담보물 사진-->
+                                    <div class="slideshow" style=" box-shadow:0px 1px 2px 0px rgba(0,0,0,0.1); ">
+                                       <div class="panel_heading">담보물 사진</div>
+                                       <div id="edd" style="visibility:hidden;opacity:0">
+                                       <ul class="slider" style="margin:0 !important; padding:15px; height:374px; ">
+                                        <li> 
+                                          <img src="20181022_101651.jpg" alt="">
+                                        </li>
+                                        <li>
+                                          <img src="%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpeg" alt="">
+                                        </li>
+                                        <li> 
+                                          <img src="20181022_101651.jpg" alt="">
+                                        </li>
+                                        <li>
+                                          <img src="%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpeg" alt="">
+                                        </li>
+                                        <li>
+                                          <img src="%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpeg" alt="">
+                                        </li>
+                                      </ul>
+                                      </div>
+                                      <!--담보물 사진 페이지 동그라미
+                                      <ol class="pagination"  style="margin:0 !important;">
+
+                                      </ol>-->
+                                    
+                                      <div class="left_btn">
+                                        <span>&lt;</span>
+                                      </div>
+                                      <div class="right_btn">
+                                        <span>&gt;</span>
+                                      </div>
+                                    </div>
+                                    <!--//slideshow-->
+                                    
+                                    <!--담보물 지도-->
+                                    <div class="tb_warranty">
+                                        <div class="panel_heading">담보물 지도
+                                                <span class="utBtn" style="float:right;">
+                                                    <button onclick="javascript:;" id="btnCell2">CELL</button>
+                                                    <button onclick="javascript:;" id="btnGPS" >GPS</button>
+                                                    <a href="#" onclick="javascript:mapZoomControl();">
+                                                    <img id="btnZoom" align="center" src="images/map_zoom.jpg"/></a>
+                                                    <input type="hidden" id="mapZooomDiv" value="0"/>         
+                                                </span> 
+                                        </div>
+                                        <!--//panel_heading-->
+                                    
+                                        <!--담보물 지도 확대-->    
+                                        <dl id="damboMapWrap" class="infoToolTip" style="width:100%; height:373px; float:right; margin:0 !important;">
+                                                <dd id="ddd">
+                                                    <div class="map" id="mapDiv" marginheight="0" marginwidth="0" frameborder="0" scrolling="no">
+                                                        <div id="map" style="width:100%; height:100%"></div>
+                                                    </div>
+
+                                                    <div class="dateSelectWrap" id="btnMapDiv02" style="display:none;">
+                                                            <div class="dateSel" id="dateSel1">
+                                                                <select id="from_select_year" name="dtm">
+                                                                </select>
+                                                                <select id="from_select_month" name="dtm">
+                                                                </select>
+                                                                <select id="from_select_day" name="dtm">
+                                                                </select>
+                                                                <select id="from_select_hour" name="dtm">
+                                                                </select>
+                                                                <span class="da">부터</span>
+                                                            </div>
+                                                            <div class="dateSel" id="dateSel2">
+                                                                 <select id="to_select_year" name="dtm">
+                                                                </select>
+                                                                <select id="to_select_month" name="dtm">
+                                                                </select>
+                                                                <select id="to_select_day" name="dtm">
+                                                                </select>
+                                                                <select id="to_select_hour" name="dtm">
+                                                                </select>
+                                                                <span class="da">까지</span>
+                                                            </div>
+                                                            <div class="addressWrap" id="addressSel" style="display:none;">
+                                                                <span class="da">위치 찾기</span>
+                                                                <input type="text" id="install_add" name="install_add"/>
+                                                                <button type='button' class='btn btn' onclick="searchAddress()">검색</button>
+                                                            </div>
+                                                    </div>                
+                                                </dd>
+                                        </dl>
+                                    
+                                    </div>
+                                    <!--//tb_warranty-->
+                                
+                                </div>
+                                <!--//container_body-->
+                                
+                                <div class="company_information" style="margin-top:10px;">
+                                    
+                                    <!--업체정보-->
+                                    <div class="company_infor" >
+                                        <div class="panel_heading" style="padding-top:10px;">업체정보</div>
+                                        <table id ="company_info" >
+                                        <tr>
+                                          <th>업체명</th>
+                                          <td>홍길동업체</td>
+                                        </tr>
+                                        <tr>
+                                          <th>주소</th>
+                                          <td>대전광역시 유성구 문화원로 111-11</td>
+                                        </tr>
+                                        <tr>
+                                          <th>담당지점</th>
+                                          <td>홍길동담당지점</td>
+                                        </tr>
+                                        <tr>
+                                          <th>고객관리번호</th>
+                                          <td>1231213132</td>
+                                        </tr>
+                                        <tr>
+                                          <th>지점담당자 / <a>전화번호</a></th>
+                                          <td>홍길동 / <a>000-0000-0000</a></td>
+                                        </tr>
+                                        <tr>
+                                          <th>업체담당자</th>
+                                          <td>홍길동</td>
+                                        </tr>
+                                        <tr>
+                                          <th>부착된단말기</th>
+                                          <td>123123</td>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <!--//company_info-->
+                                    
+                                    <!--담보물 가동률-->
+                                    <div class="dambo_ing">
+                                      <div class="panel_heading" style="padding-top:10px;">담보물 가동률
+                                        <ul style="float:right;  width:400px; margin:0 !important; margin-right:30px !important;">
+                                          <li>
+                                            <button onclick="setGraph('battery');">배터리</button>
+                                          </li>
+                                          <li>
+                                            <button onclick="setGraph('detach');">가동률</button>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <!--//dambo_ing-->
+                                     
+                                      <!--담보물 차트-->
+                                      <div class="chart-container">
+                                        <canvas id="damboGraph"></canvas>
+                                      </div>
+                                      <script>
+                                        
+                                        var data = {
+                                          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+                                          datasets: [{
+                                            label: "가동률",
+                                            backgroundColor: "rgba(255,99,132,0.2)",
+                                            borderColor: "rgba(255,99,132,1)",
+                                            borderWidth: 2,
+                                            hoverBackgroundColor: "rgba(255,99,132,0.4)",
+                                            hoverBorderColor: "rgba(255,99,132,1)",
+                                            data: [65, 59, 20, 81, 56, 55, 40],
+                                          }]
+                                        };
+
+                                        var options = {
+                                          maintainAspectRatio: false,
+                                          scales: {
+                                            yAxes: [{
+                                              stacked: true,
+                                              gridLines: {
+                                                display: true,
+                                                color: "rgba(255,99,132,0.2)"
+                                              }
+                                            }],
+                                            xAxes: [{
+                                              gridLines: {
+                                                display: false
+                                              }
+                                            }]
+                                          }
+                                        };
+
+                                        Chart.Line('damboGraph', {
+                                          options: options,
+                                          data: data
+                                        });
+
+                                        </script>
+                                    
+                                    </div>
+                                    <!--//dambo_ing--> 
+                                    
+                                    <!--담보물 관리기록부-->
+                                    <div class="damboborder" >
+                                        <div class="panel_heading" style="padding-top:10px;">관리기록부</div>
+                                        <table id ="company_info" >
+                                        <tr>
+                                          <th style="width:10%">EUID</th>
+                                          <th style="width:10%">작성자</th>
+                                          <th style="width:48%">내용</th>
+                                          <th style="width:20%">날짜</th>
+                                        </tr>
+                                        <tr>
+                                            <td>000000</td>
+                                            <td>홍길동</td>
+                                            <td>내용없음</td>
+                                            <td>2019-07-15 0000-00-00 00:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>000000</td>
+                                            <td>홍길동</td>
+                                            <td>내용없음</td>
+                                            <td>2019-07-15 0000-00-00 00:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>000000</td>
+                                            <td>홍길동</td>
+                                            <td>내용없음</td>
+                                            <td>2019-07-15 0000-00-00 00:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>000000</td>
+                                            <td>홍길동</td>
+                                            <td>내용없음내용없음내용없음내용없음내용없음내용없음내용없음내용없음내용없음내용없음내용없음</td>
+                                            <td>2019-07-15 0000-00-00 00:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>000000</td>
+                                            <td>홍길동</td>
+                                            <td>내용없음</td>
+                                            <td>2019-07-15 0000-00-00 00:00</td>
+                                        </tr>
+                                      </table>
+                                     
+                                     <!--테이블 번호-->
+                                     <div class="table_number" style="height: 30px; text-align: center; font-size:0.7em;">
+                                      <ul style="text-align: center; height: 30px; margin:0 !important; padding:15px 0;">
+                                        <span class="button_left"></span>
+                                            <li style="width: 25px; height: 40px;">
+                                               <a href="#">1</a>
+                                            </li>
+                                            <li style=" width: 25px; height: 40px;">
+                                               <a href="#">2</a>
+                                            </li>
+                                            <li style=" width: 25px; height: 40px;">
+                                               <a href="#">3</a>
+                                            </li>
+                                            <li style=" width: 25px; height: 40px;">
+                                               <a href="#">4</a>
+                                            </li>
+                                        <span class="button_right"></span>            
+                                      </ul>          
+                                     </div>
+                                     <!--//table_number--> 
+                                    </div>
+                                    <!--//company_info-->
+                                    
+                                    <!--단말기 로그-->
+                                    <div class="tb_detector_log" >
+                                        <div class="panel_heading" style="padding-top:10px;">단말기 로그
+                                        <div style="float:right; ">
+                                          <select id="selectLog">
+                                            <option value="all">전체</option>
+                                            <option value="report">주기보고</option>
+                                            <option value="event">이벤트보고</option>
+                                          </select>
+                                        </div>
+                                        </div>
+                                        <table id ="company_info" >
+                                        <tr>
+                                          <th style="width:25%;">날짜</th>
+                                          <th style="width:15%;">상태</th>
+                                          <th style="width:15%;">배터리</th>
+                                          <th style="width:15%;">가동률</th>
+                                          <th style="width:15%;">EUID</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2019-07-15 0000-00-00 00:00</td>
+                                            <td>정상가동중</td>
+                                            <td>100%</td>
+                                            <td>100%</td>
+                                            <td>000000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2019-07-15 0000-00-00 00:00</td>
+                                            <td>정상가동중</td>
+                                            <td>100%</td>
+                                            <td>100%</td>
+                                            <td>000000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2019-07-15 0000-00-00 00:00</td>
+                                            <td>정상가동중</td>
+                                            <td>100%</td>
+                                            <td>100%</td>
+                                            <td>000000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2019-07-15 0000-00-00 00:00</td>
+                                            <td>정상가동중</td>
+                                            <td>100%</td>
+                                            <td>100%</td>
+                                            <td>000000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2019-07-15 0000-00-00 00:00</td>
+                                            <td>정상가동중</td>
+                                            <td>100%</td>
+                                            <td>100%</td>
+                                            <td>000000</td>
+                                        </tr>
+                                      </table>
+                                     
+                                     <!--테이블 번호-->
+                                     <div class="table_number" style="height: 30px; text-align: center; font-size:0.7em;">
+                                      <ul style="text-align: center; height: 30px; margin:0 !important; padding:15px 0;">
+                                        <span class="button_left"></span>
+                                            <li style="width: 25px; height: 40px;">
+                                               <a href="#">1</a>
+                                            </li>
+                                            <li style=" width: 25px; height: 40px;">
+                                               <a href="#">2</a>
+                                            </li>
+                                            <li style=" width: 25px; height: 40px;">
+                                               <a href="#">3</a>
+                                            </li>
+                                            <li style=" width: 25px; height: 40px;">
+                                               <a href="#">4</a>
+                                            </li>
+                                        <span class="button_right"></span>            
+                                      </ul>          
+                                     </div>
+                                     <!--//table_number--> 
+                                    </div>
+                                    <!--//company_info-->
+                                </div>
+                                <!--//company_information-->
+                            </div>
+                            <!--//container_tab-->
+                        </div>
+                        <!--//container-->
+                    </section>
+                    <!-- //두번째 영역-->   
+                    
+			</div>
+            <!--//main-->
+ 
+
+		  <!-- Scripts -->
+        
+            
+        
+            <script	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"	type="text/javascript"></script>			
+			
+            <script	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6FriG1LzVmG4J9194pjsJAKs3nsfX60k&callback=initMap"	type="text/javascript"></script>
+			
+            <script src="assets/js/jquery.min.js"></script>
+        
+            <Script src="http://code.jquery.com/jquery-1.8.2.min.js"></Script>
+			
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+		    
+            <script src="assets/js/poor.js"></script>
+			
+            <script src="assets/js/browser.min.js"></script>
+			
+            <script src="assets/js/breakpoints.min.js"></script>
+			
+            <script src="assets/js/util.js"></script>
+
+			<script src="assets/js/main.js"></script>
+        
+        
+	
+    </body>
+</html>
